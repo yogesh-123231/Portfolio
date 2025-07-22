@@ -42,6 +42,22 @@ export function Projects() {
       technologies: ['Vue.js', 'Firebase', 'Vuetify', 'Cloud Functions'],
       liveUrl: 'https://task-demo.com',
       githubUrl: 'https://github.com/johndoe/task-manager'
+    },
+    {
+      title: 'AI Code Assistant',
+      description: 'Intelligent code completion and debugging assistant powered by machine learning algorithms.',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop',
+      technologies: ['Python', 'TensorFlow', 'React', 'FastAPI'],
+      liveUrl: 'https://ai-assistant-demo.com',
+      githubUrl: 'https://github.com/johndoe/ai-assistant'
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'Modern responsive portfolio website with 3D animations, dark mode, and interactive components.',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
+      technologies: ['React', 'Three.js', 'Framer Motion', 'Tailwind CSS'],
+      liveUrl: 'https://portfolio-demo.com',
+      githubUrl: 'https://github.com/johndoe/portfolio'
     }
   ]
 
