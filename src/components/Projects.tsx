@@ -59,7 +59,7 @@ export function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <Card 
               key={project.title}
@@ -123,20 +123,20 @@ export function Projects() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex-1 border-border hover:bg-secondary"
+                  className="px-3 py-1 text-xs border-border hover:bg-secondary"
                   onClick={() => window.open(project.liveUrl, '_blank')}
                 >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Live Demo
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Demo
                 </Button>
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="flex-1 hover:bg-secondary"
+                  className="px-3 py-1 text-xs hover:bg-secondary"
                   onClick={() => window.open(project.githubUrl, '_blank')}
                 >
-                  <Github className="h-4 w-4 mr-2" />
-                  Source
+                  <Github className="h-3 w-3 mr-1" />
+                  Code
                 </Button>
               </CardFooter>
             </Card>
