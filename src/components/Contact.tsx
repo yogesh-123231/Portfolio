@@ -5,54 +5,80 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
 
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
-  })
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    // Simulate form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
     if (!formData.name || !formData.email || !formData.message) {
-      toast.error('Please fill in all required fields')
-      return
+      toast.error('Please fill in all required fields');
+      return;
     }
-    
-    toast.success('Message sent successfully! I\'ll get back to you soon.')
-    setFormData({ name: '', email: '', subject: '', message: '' })
-  }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "bbc7414c-2194-4b75-ab06-f3d5010c7eef", // ✅ Your real key
+          from_name: "Portfolio Contact Form",                 // ✅ Optional but nice
+          subject: formData.subject || "New Message from Portfolio",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Message sent successfully! I'll get back to you soon.");
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        toast.error(result.message || 'Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      toast.error('Network error. Please try again later.');
+      console.error("Web3Forms error:", error);
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
-    }))
-  }
+    }));
+  };
+
 
   const contactInfo = [
     {
       icon: Mail,
       label: 'Email',
-      value: 'john.doe@example.com',
-      href: 'mailto:john.doe@example.com'
+      value: 'yogeshdumane987@gmail.com',
+      href: 'mailto:yogeshdumane987@gmail.com'
     },
     {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      icon: Github,
+      label: 'Github',
+      value: 'github.com/YogeshDumane',
+      href: 'https://github.com/yogesh-123231'
     },
     {
-      icon: MapPin,
-      label: 'Location',
-      value: 'San Francisco, CA',
-      href: 'https://maps.google.com/?q=San+Francisco,CA'
+      icon: Linkedin,
+      label: 'Linkdin',
+      value: 'linkedin.com/in/yogeshdumane',
+      href: 'https://www.linkedin.com/in/yogeshdumane/'
     }
   ]
 
@@ -60,24 +86,23 @@ export function Contact() {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/johndoe'
+      href: 'https://github.com/yogesh-123231'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/johndoe'
+      href: 'https://www.linkedin.com/in/yogeshdumane/'
     },
     {
       icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com/johndoe'
+      label: 'x.com/yogesh_dumane',
+      href: 'https://x.com/yogesh_dumane'
     }
   ]
 
   return (
     <section id="contact" className="py-20 bg-gradient-secondary">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Get In <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
@@ -88,18 +113,17 @@ export function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
           <div className="animate-slide-up">
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">Let's Talk</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   I'm always open to discussing new opportunities, creative projects, 
-                  or just having a friendly chat about technology and development.
+                  or just having a friendly chat about technology and development. 
+                  I typically respond within 24 hours.
                 </p>
               </div>
 
-              {/* Contact Details */}
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
                   <Card 
@@ -123,7 +147,6 @@ export function Contact() {
                 ))}
               </div>
 
-              {/* Social Links */}
               <div>
                 <h4 className="text-lg font-semibold mb-4 text-foreground">Follow Me</h4>
                 <div className="flex gap-4">
@@ -141,7 +164,6 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Availability */}
               <Card className="bg-card border-border shadow-card">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3">
@@ -156,7 +178,6 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <Card className="bg-card border-border shadow-glow">
               <CardHeader>
@@ -175,7 +196,7 @@ export function Contact() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Your full name"
+                        placeholder="Your name"
                         className="bg-input border-border focus:ring-primary"
                         required
                       />
@@ -188,7 +209,7 @@ export function Contact() {
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="your.email@example.com"
+                        placeholder="your email"
                         className="bg-input border-border focus:ring-primary"
                         required
                       />
@@ -234,7 +255,6 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
         <div className="text-center mt-16 animate-fade-in">
           <Card className="bg-gradient-primary text-primary-foreground max-w-2xl mx-auto">
             <CardContent className="p-8">

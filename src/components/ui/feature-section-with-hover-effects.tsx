@@ -8,6 +8,11 @@ import {
   HelpCircle,
   Settings,
   Heart,
+  Code2,
+  User2,
+  Box,
+  Database,
+  GitBranch,
 } from "lucide-react";
 
 export function FeaturesSectionWithHoverEffects() {
@@ -17,28 +22,51 @@ export function FeaturesSectionWithHoverEffects() {
       description:
         "Building modern, responsive user interfaces with cutting-edge technologies and frameworks.",
       icon: <Terminal />,
-      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vue.js', 'HTML5/CSS3']
+      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML5/CSS3']
     },
     {
       title: "Backend Development",
       description:
         "Creating robust server-side applications and APIs with scalable architecture.",
       icon: <Zap />,
-      technologies: ['Node.js', 'Python', 'Express.js', 'Django', 'PostgreSQL', 'MongoDB']
+      technologies: ['Node.js', 'Python', 'Express.js', 'Django', 'MongoDB']
     },
     {
-      title: "Cloud & DevOps",
-      description:
-        "Deploying and managing applications in cloud environments with modern DevOps practices.",
-      icon: <Cloud />,
-      technologies: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Vercel', 'Railway']
-    },
+  title: "Version Control & Collaboration",
+  description: "Maintaining clean codebases and collaborating effectively using modern development workflows.",
+  icon: <GitBranch />,
+  technologies: ['Git', 'GitHub', 'Branching', 'Pull Requests']
+},
     {
       title: "Tools & Others",
       description: "Utilizing essential development tools and technologies to streamline workflows.",
       icon: <Settings />,
-      technologies: ['Git', 'Figma', 'VS Code', 'Postman', 'Jira', 'Linux']
+      technologies: ['Git', 'Figma', 'VS Code']
     },
+    {
+  title: "Programming Languages",
+  description: "Writing clean, scalable code using modern programming languages.",
+  icon: <Code2 />,
+  technologies: ['JavaScript', 'TypeScript', 'Python', 'C++', 'Java']
+},
+{
+  title: "Soft Skills",
+  description: "Combining technical skills with strong communication and problem-solving.",
+  icon: <User2 />,
+  technologies: ['Problem Solving', 'Communication', 'Time Management', 'Teamwork', 'Adaptability']
+},
+{
+  title: "3D & Animations",
+  description: "Creating interactive and visually appealing experiences with animation libraries.",
+  icon: <Box />,
+  technologies: ['Three.js', 'GSAP', 'Framer Motion', 'CSS Animations']
+},
+{
+  title: "Databases",
+  description: "Designing, managing, and integrating scalable data storage solutions.",
+  icon: <Database />,
+  technologies: ['MongoDB','Firebase', 'Supabase', 'MySQL',]
+}
   ];
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto">

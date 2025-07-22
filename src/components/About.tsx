@@ -33,8 +33,7 @@ export function About() {
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer with 5+ years of experience crafting digital solutions. 
-            I love turning complex problems into simple, beautiful designs.
+            I'm a passionate full-stack developer with 1+ years of experience turning ideas into engaging digital solutions.
           </p>
         </div>
 
@@ -44,18 +43,16 @@ export function About() {
             <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
               <h3 className="text-2xl font-bold mb-4 text-card-foreground">My Journey</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Started as a curious student learning HTML/CSS, evolved into a full-stack developer 
-                working with modern frameworks and cloud technologies. I believe in continuous learning 
-                and staying updated with the latest tech trends.
+                What began as a curious dive into HTML and CSS has grown into a full-fledged journey as a full-stack developer. From building simple web pages to crafting scalable applications with modern frameworks—I’ve come a long way. I’m driven by curiosity, committed to continuous learning, and always exploring the latest in tech to stay ahead of the curve.
               </p>
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-secondary rounded-lg">
-                  <div className="text-2xl font-bold text-primary">50+</div>
+                  <div className="text-2xl font-bold text-primary">10+</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </div>
                 <div className="text-center p-4 bg-secondary rounded-lg">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">1+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
               </div>

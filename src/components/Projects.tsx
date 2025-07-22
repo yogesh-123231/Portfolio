@@ -4,61 +4,39 @@ import { Badge } from '@/components/ui/badge'
 import { ExternalLink, Github } from 'lucide-react'
 
 // Import project images
-import project1 from '@/assets/project-1.jpg'
-import project2 from '@/assets/project-2.jpg'
-import project3 from '@/assets/project-3.jpg'
-import project4 from '@/assets/project-4.jpg'
+import project1 from '@/assets/project1.png'
+import project2 from '@/assets/project2.png'
+import project3 from '@/assets/project3.png'
+
 
 export function Projects() {
   const projects = [
-    {
-      title: 'Analytics Dashboard',
-      description: 'A comprehensive analytics dashboard with real-time data visualization, interactive charts, and customizable reports.',
-      image: project1,
-      technologies: ['React', 'TypeScript', 'Chart.js', 'Node.js'],
-      liveUrl: 'https://dashboard-demo.com',
-      githubUrl: 'https://github.com/johndoe/dashboard'
-    },
-    {
-      title: 'E-Commerce Platform',
-      description: 'Modern e-commerce platform with payment integration, inventory management, and responsive mobile design.',
-      image: project2,
-      technologies: ['Next.js', 'Stripe', 'PostgreSQL', 'Tailwind CSS'],
-      liveUrl: 'https://ecommerce-demo.com',
-      githubUrl: 'https://github.com/johndoe/ecommerce'
-    },
-    {
-      title: 'Social Media App',
-      description: 'Full-stack social media application with real-time messaging, post interactions, and user authentication.',
-      image: project3,
-      technologies: ['React', 'Socket.io', 'MongoDB', 'Express.js'],
-      liveUrl: 'https://social-demo.com',
-      githubUrl: 'https://github.com/johndoe/social-app'
-    },
-    {
-      title: 'Task Management Tool',
-      description: 'Collaborative project management tool with kanban boards, team collaboration, and progress tracking.',
-      image: project4,
-      technologies: ['Vue.js', 'Firebase', 'Vuetify', 'Cloud Functions'],
-      liveUrl: 'https://task-demo.com',
-      githubUrl: 'https://github.com/johndoe/task-manager'
-    },
-    {
-      title: 'AI Code Assistant',
-      description: 'Intelligent code completion and debugging assistant powered by machine learning algorithms.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop',
-      technologies: ['Python', 'TensorFlow', 'React', 'FastAPI'],
-      liveUrl: 'https://ai-assistant-demo.com',
-      githubUrl: 'https://github.com/johndoe/ai-assistant'
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'Modern responsive portfolio website with 3D animations, dark mode, and interactive components.',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
-      technologies: ['React', 'Three.js', 'Framer Motion', 'Tailwind CSS'],
-      liveUrl: 'https://portfolio-demo.com',
-      githubUrl: 'https://github.com/johndoe/portfolio'
-    }
+   {
+  title: 'Job Portal Web App',
+  description: 'A full-featured job portal with authentication, job listings from Supabase, filtering, and job application flow for users.',
+  image: project1,
+  technologies: ['React', 'JavaScript','Supabase', 'Firebase Auth', 'Tailwind CSS'],
+  liveUrl: 'https://job-portal24.netlify.app/', // replace with actual link
+  githubUrl: 'https://github.com/yogesh-123231/Job-Portal'
+},
+{
+  title: 'Payflow – Landing Page for Payment Gateway',
+  description: 'Responsive and clean marketing landing page designed for a fictional payment gateway company, focused on modern UI and UX.',
+  image: project2,
+  technologies: ['React', 'Typescript' ,'Tailwind CSS', 'Framer Motion', 'Shadcn'],
+  liveUrl: 'https://payflow-landing-page.netlify.app/', // replace with actual link
+  githubUrl: 'https://github.com/yogesh-123231/PayFlow-Landing-Page'
+},
+{
+  title: 'Real Estate Landing Page',
+  description: 'Visually appealing, modern landing page for a real estate service using clean design and responsive layout.',
+  image: project3,
+  technologies: ['react','Framer motion','Web3Forms','JavaScript', ''],
+  liveUrl: 'https://ecoheaven-reality.netlify.app/', // replace with actual link
+  githubUrl: 'https://github.com/yogesh-123231/EcoHeaven-Realty'
+}
+
+    
   ]
 
   return (
