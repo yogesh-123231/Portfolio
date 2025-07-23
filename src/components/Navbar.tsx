@@ -173,7 +173,7 @@ export function Navbar() {
                 onClick={() => {
                   const link = document.createElement("a");
                   link.href = new URL('/src/assets/YogeshDumane_Resume.pdf', import.meta.url);
-                  link.download = "Yogesh_Dumane_Resume.pdf";
+                  link.download = "YogeshDumane_Resume.pdf";
                   link.click();
                 }}
               >
