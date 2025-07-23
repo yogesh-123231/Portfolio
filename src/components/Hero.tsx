@@ -3,6 +3,7 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import { motion } from "framer-motion";
+import { Typewriter } from 'react-simple-typewriter';
 
 export function Hero() {
   const scrollToProjects = () => {
@@ -15,7 +16,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="max-h lg:max-h-screen bg-black/[0.96] relative overflow-hidden"
+      className="max-h lg:max-h-screen bg-black/[0.96] relative overflow-hidden "
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
@@ -43,7 +44,7 @@ export function Hero() {
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-orbitron">
                 <span className="text-white">Hi, I&apos;m</span>
                 <br />
                 <span className="bg-gradient-primary bg-clip-text text-transparent animate-glow">
@@ -52,8 +53,16 @@ export function Hero() {
               </h1>
 
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-muted-foreground">
-                A Web Developer
-              </h2>
+  <Typewriter
+    words={['A Web Developer']}
+    loop={0} // 0 = infinite loop
+    cursor
+    cursorStyle="_"
+    typeSpeed={70}
+    deleteSpeed={50}
+    delaySpeed={1000}
+  />
+</h2>
 
               <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl leading-relaxed mx-auto lg:mx-0">
                 I specialize in building fast, responsive, and beautiful websites using the latest tech—React, Tailwind, Animations, and 3D models.

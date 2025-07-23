@@ -30,7 +30,7 @@ export function Projects() {
 },
 {
   title: 'Real Estate Landing Page',
-  description: 'Visually appealing, modern landing page for a real estate service using clean design and responsive layout.',
+  description: 'Figma to Code - Visually appealing, modern landing page for a real estate service using Figma design and responsive layout.',
   image: project3,
   technologies: ['React','Framer motion','Web3Forms','JavaScript', 'Tailwind css'],
   liveUrl: 'https://ecoheaven-reality.netlify.app/', // replace with actual link
@@ -52,8 +52,9 @@ export function Projects() {
   }} className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Featured <span className="bg-gradient-primary bg-clip-text text-transparent">Projects</span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-orbitron tracking-wider">
+            Crafting <span className="bg-gradient-primary bg-clip-text text-transparent ">Digital
+Experiences</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A showcase of my recent work and contributions to various projects

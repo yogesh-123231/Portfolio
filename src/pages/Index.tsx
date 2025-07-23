@@ -6,6 +6,7 @@ import { Projects } from '@/components/Projects'
 import { Education } from '@/components/Education'
 import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/ui/footer'
+import ServicesSection from '@/components/ServicesSection'
 
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
         <Hero />
         <About />
         <Skills />
+        <ServicesSection />
         <Projects />
         <Education />
         <Contact />

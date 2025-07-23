@@ -14,7 +14,7 @@ export function Skills() {
   }} className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-orbitron tracking-wider">
             My <span className="bg-gradient-primary bg-clip-text text-transparent">Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

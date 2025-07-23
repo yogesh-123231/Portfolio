@@ -27,7 +27,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-secondary">
+    <section id="about" className="py-20 bg-gradient-secondary ">
       <motion.div 
          initial={{ opacity: 0, y: 50 }}
 whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ whileInView={{ opacity: 1, y: 0 }}
   }}
   className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-orbitron tracking-wider">
             About{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Me
@@ -56,7 +56,7 @@ whileInView={{ opacity: 1, y: 0 }}
           {/* Left: Main Content */}
           <div className="space-y-6 animate-slide-up">
             <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-card-foreground">
+              <h3 className="text-2xl font-bold mb-4 text-card-foreground font-orbitron">
                 My Journey
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">

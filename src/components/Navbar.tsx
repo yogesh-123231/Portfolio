@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
   Moon, Sun, Download, Menu, X,
   Home, User, Code, Briefcase, GraduationCap, Mail,
+  Code2,
 } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import { motion } from "framer-motion";
@@ -121,6 +122,7 @@ export function Navbar() {
     { name: "Home", id: "hero", icon: Home },
     { name: "About", id: "about", icon: User },
     { name: "Skills", id: "skills", icon: Code },
+    { name: "Services", id: "Services", icon: Code2 },
     { name: "Projects", id: "projects", icon: Briefcase },
     { name: "Education", id: "education", icon: GraduationCap },
     { name: "Contact", id: "contact", icon: Mail },
@@ -144,7 +146,7 @@ export function Navbar() {
             </div>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex flex-1 justify-center">
+            <div className="hidden md:flex flex-1 justify-center tracking-wider">
               <TubelightNav
                 items={navItems}
                 activeTab={activeTab}
