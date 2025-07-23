@@ -31,7 +31,7 @@ export function Contact() {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          access_key: "bbc7414c-2194-4b75-ab06-f3d5010c7eef", // ✅ Your real key
+          access_key: "import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;", // ✅ Your real key
           from_name: "Portfolio Contact Form",                 // ✅ Optional but nice
           subject: formData.subject || "New Message from Portfolio",
           name: formData.name,
