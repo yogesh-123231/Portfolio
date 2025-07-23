@@ -172,7 +172,7 @@ export function Navbar() {
                 className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-medium text-xs sm:text-sm px-2 sm:px-3"
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = new URL('/src/assets/YogeshDumane_resume.pdf', import.meta.url);
+                  link.href = new URL('/src/assets/YogeshDumane_Resume.pdf', import.meta.url);
                   link.download = "Yogesh_Dumane_Resume.pdf";
                   link.click();
                 }}
