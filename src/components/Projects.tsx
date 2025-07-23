@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { ExternalLink, Github } from 'lucide-react'
+import { motion } from "framer-motion";
 
 // Import project images
 import project1 from '@/assets/project1.png'
@@ -31,7 +32,7 @@ export function Projects() {
   title: 'Real Estate Landing Page',
   description: 'Visually appealing, modern landing page for a real estate service using clean design and responsive layout.',
   image: project3,
-  technologies: ['react','Framer motion','Web3Forms','JavaScript', ''],
+  technologies: ['React','Framer motion','Web3Forms','JavaScript', 'Tailwind css'],
   liveUrl: 'https://ecoheaven-reality.netlify.app/', // replace with actual link
   githubUrl: 'https://github.com/yogesh-123231/EcoHeaven-Realty'
 }
@@ -41,7 +42,14 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-20 bg-gradient-secondary">
-      <div className="container mx-auto px-6">
+      <motion.div 
+         initial={{ opacity: 0, y: 100 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.1 }} // triggers when 30% is in view
+  transition={{
+    duration: 0.8,
+    ease: [0.25, 0.46, 0.45, 0.94],
+  }} className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -117,7 +125,7 @@ export function Projects() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="px-3 py-1 text-xs border-border hover:bg-secondary"
+                  className="px-3 py-1 text-xs border-border hover:bg-secondary "
                   onClick={() => window.open(project.liveUrl, '_blank')}
                 >
                   <ExternalLink className="h-3 w-3 mr-1" />
@@ -142,14 +150,14 @@ export function Projects() {
           <Button
             variant="outline"
             size="lg"
-            className="border-border hover:bg-secondary"
-            onClick={() => window.open('https://github.com/johndoe', '_blank')}
+            className="border-border bg-gradient-primary hover:bg-secondary hover:opacity-90 text-primary-foreground font-medium shadow-primary"
+            onClick={() => window.open('https://github.com/yogesh-123231', '_blank')}
           >
             <Github className="h-5 w-5 mr-2" />
             View All Projects on GitHub
           </Button>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

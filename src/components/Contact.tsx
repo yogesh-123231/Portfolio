@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
+import { motion } from "framer-motion";
 
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
 export function Contact() {
@@ -103,17 +104,36 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 bg-gradient-secondary">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }} // triggers when 30% is in view
+          transition={{
+            duration: 1.2,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }} 
+          className="text-center mb-16 animate-fade-in"
+        >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Get In <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
           </p>
-        </div>
+        </motion.div>
 
+        {/* left section */}
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="animate-slide-up">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 1.2,
+              ease: [0.25, 0.46, 0.45, 0.94], // smooth easing
+            }} 
+            className=""
+          >
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">Let's Talk</h3>
@@ -176,9 +196,19 @@ export function Contact() {
                 </CardContent>
               </Card>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 1.2,
+              ease: [0.25, 0.46, 0.45, 0.94], // smooth ease-in-out
+            }} 
+            className="" 
+            style={{ animationDelay: '0.2s' }}
+          >
             <Card className="bg-card border-border shadow-glow">
               <CardHeader>
                 <CardTitle className="text-2xl text-card-foreground">Send Message</CardTitle>
@@ -252,15 +282,15 @@ export function Contact() {
                 </form>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
         </div>
 
         <div className="text-center mt-16 animate-fade-in">
           <Card className="bg-gradient-primary text-primary-foreground max-w-2xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
+              <h3 className="text-2xl font-bold mb-4">Ready to work together?</h3>
               <p className="mb-6 opacity-90">
-                Let's turn your ideas into reality. I'm here to help you build something amazing.
+                I'm open to internships, freelance gigs, and full-time opportunities. Let's connect!
               </p>
               <Button 
                 variant="secondary"

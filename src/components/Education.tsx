@@ -2,9 +2,49 @@ import { Timeline } from '@/components/ui/timeline'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Award, GraduationCap, MapPin, Star, Trophy } from 'lucide-react'
+import { motion } from "framer-motion";
 
 export function Education() {
   const timelineData = [
+    {
+      title: "2021 - 2024",
+      content: (
+        <div>
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-foreground mb-2">Diploma in Computer Engineering</h3>
+            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+              <div className="flex items-center gap-1">
+                <Star className="h-3 w-3 text-primary" />
+                MIT College, Pune
+              </div>
+              <div className="flex items-center gap-1">
+                <MapPin className="h-3 w-3" />
+                Pune, India
+              </div>
+              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                Strong Fundamentals
+              </div>
+            </div>
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              Developed a solid foundation in core programming, data structures, and software engineering principles through hands-on project-based learning.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {["Top Performer", "Capstone Project Completed"].map((achievement) => (
+                <Badge
+                  key={achievement}
+                  variant="secondary"
+                  className="text-xs bg-secondary/80 backdrop-blur-sm"
+                >
+                  <Trophy className="h-3 w-3 mr-1" />
+                  {achievement}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      ),
+    },
+
     {
       title: "2024 - 2027",
       content: (
@@ -68,45 +108,7 @@ export function Education() {
       ),
     },
 
-    {
-      title: "2021 - 2024",
-      content: (
-        <div>
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-foreground mb-2">Diploma in Computer Engineering</h3>
-            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-              <div className="flex items-center gap-1">
-                <Star className="h-3 w-3 text-primary" />
-                MIT College, Pune
-              </div>
-              <div className="flex items-center gap-1">
-                <MapPin className="h-3 w-3" />
-                Pune, India
-              </div>
-              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                Strong Fundamentals
-              </div>
-            </div>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
-              Developed a solid foundation in core programming, data structures, and software engineering principles through hands-on project-based learning.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {["Top Performer", "Capstone Project Completed"].map((achievement) => (
-                <Badge
-                  key={achievement}
-                  variant="secondary"
-                  className="text-xs bg-secondary/80 backdrop-blur-sm"
-                >
-                  <Trophy className="h-3 w-3 mr-1" />
-                  {achievement}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </div>
-      ),
-    },
-
+    
     {
       title: "Continuous Learning",
       content: (

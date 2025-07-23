@@ -16,6 +16,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+  
 
   useEffect(() => {
     if (ref.current) {
@@ -33,7 +34,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
+    <motion.div
+  initial={{ opacity: 0, x: -100 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true, amount: 0.1 }}
+  transition={{
+    duration: 0.6,
+    ease: [0.25, 0.46, 0.45, 0.94], // smooth easing
+  }}
       className="w-full bg-background font-sans md:px-10"
       ref={containerRef}
     >
@@ -84,6 +92,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
