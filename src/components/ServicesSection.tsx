@@ -4,12 +4,17 @@ import { useState } from 'react';
 
 const services = [
   {
-    title: 'Building a Landing Page ',
-    description: 'Beautifully crafted, high-converting landing pages tailored to your brand with modern aesthetics and conversion optimization.',
+    title: 'Custom Web Solutions',
+    description: 'From high-converting landing pages to elegant portfolios and dynamic dashboards, I design and develop responsive, user-focused websites tailored to your needs.',
     icon: MonitorPlay,
     gradient: 'from-blue-500/20 to-cyan-500/20',
     color: 'text-blue-500',
-    features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Conversion Focused'],
+    features: [ 
+    'Responsive Design',
+    'Modern UI/UX',
+    'Fast Loading & SEO Friendly',
+    'Landing Pages, Portfolios & Dashboards'
+  ,],
     deliveryTime: '5-7 days',
   },
   {
