@@ -30,13 +30,13 @@ const services = [
         deliveryTime: '6-8 days',
     },
     {
-      title: '3D & Animation Websites',
-      description: 'Immersive websites with cutting-edge 3D elements and smooth, eye-catching animations that captivate your audience.',
+      title: 'Modern Websites with 3D Touch',
+      description: 'Sleek, interactive websites enhanced with subtle 3D elements and smooth animations for a dynamic user experience.',
       icon: Paintbrush2,
       gradient: 'from-purple-500/20 to-pink-500/20',
       color: 'text-purple-500',
-      features: ['3D Elements', 'Smooth Animations', 'Interactive UI', 'Dark Mode Toggle'],
-      deliveryTime: '9-10 days',
+      features: ['3D Hero Sections', 'Micro-Animations', 'Interactive UI', 'Dark Mode Ready'],
+      deliveryTime: '7-9 days',
     },
 ];
 
