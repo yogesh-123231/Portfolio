@@ -1,0 +1,258 @@
+/* =========================================================
+   EDUCATION SECTION
+   ========================================================= */
+
+.education {
+  width: 100%;
+  position: relative;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.education__container {
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding-left: 68px;
+  padding-right: 68px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.education .section-head {
+  width: 100%;
+
+  margin-bottom: 58px;
+}
+
+
+/* =========================================================
+   EDUCATION GRID
+   ========================================================= */
+
+.education__grid {
+  width: 100%;
+
+  display: grid;
+
+  padding-bottom: 70px;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  column-gap: 100px;
+
+  align-items: start;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   EDUCATION ITEM
+   ========================================================= */
+
+.education__item {
+  min-width: 0;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   EDUCATION HEADING
+   ========================================================= */
+
+.education__heading {
+  margin: 0 0 22px 0;
+
+  font-family: var(--font-body);
+
+  font-weight: 600;
+
+  font-size: clamp(30px, 3.6vw, 44px);
+
+  line-height: 1.18;
+
+  letter-spacing: -0.01em;
+
+  color: var(--text);
+
+  max-width: 600px;
+}
+
+
+/* =========================================================
+   ACCENT
+   ========================================================= */
+
+.education__heading .accent {
+  color: var(--lime);
+}
+
+
+/* =========================================================
+   INSTITUTION
+   ========================================================= */
+
+.education__institution {
+  margin: 0 0 8px 0;
+
+  font-family: var(--font-body);
+
+  font-size: 14.5px;
+
+  line-height: 24px;
+
+  color: var(--text-dim);
+}
+
+
+/* =========================================================
+   GRADUATION / DIPLOMA DETAILS
+   ========================================================= */
+
+.education__grad {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 20px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: var(--lime);
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+  .education__container {
+    padding-left: 68px;
+    padding-right: 68px;
+  }
+
+  .education__grid {
+    column-gap: 120px;
+  }
+
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .education__container {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .education__grid {
+    column-gap: 70px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 860px) {
+
+  .education__container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .education .section-head {
+    margin-bottom: 45px;
+  }
+
+  .education__grid {
+    grid-template-columns: 1fr;
+
+    row-gap: 45px;
+
+    column-gap: 0;
+  }
+
+  .education__heading {
+    max-width: 650px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .education__container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .education .section-head {
+    margin-bottom: 38px;
+  }
+
+  .education__grid {
+    row-gap: 38px;
+  }
+
+  .education__heading {
+    margin-bottom: 18px;
+
+    font-size: 30px;
+
+    line-height: 1.18;
+  }
+
+  .education__institution {
+    font-size: 14px;
+  }
+
+  .education__grad {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .education__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .education__heading {
+    font-size: 28px;
+  }
+
+}

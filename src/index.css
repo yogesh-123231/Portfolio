@@ -1,0 +1,140 @@
+:root {
+  --bg: #121312;
+  --bg-soft: #141514;
+  --surface: #1a1b1a;
+  --surface-2: #1d1e1d;
+  --border: #232323;
+  --border-soft: #1c1c1c;
+
+  --text: #F1F0E9;
+  /* updated white */
+  --text-dim: #9a9a94;
+  --text-dimmer: #6a6a65;
+
+  --lime: #D5F26C;
+  /* updated yellow/lime */
+  --lime-dim: #b3d658;
+
+  --font-display: "Space Grotesk", sans-serif;
+  /* heading + subheading */
+  --font-body: "Manrope", sans-serif;
+  /* body / sub-sub-heading */
+  --font-mono: "DM Mono", monospace;
+  /* labels/eyebrow/nav/details */
+
+  --max-width: 1320px;
+  --edge: 76px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--lime);
+  color: #121312;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--edge);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lime);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 14px;
+  height: 1px;
+  background: var(--lime);
+  display: inline-block;
+}
+
+.section {
+  position: relative;
+  padding: 140px 0;
+  border-top: 1px solid var(--border-soft);
+}
+
+.section-head {
+  margin-bottom: 56px;
+}
+
+@media (max-width: 860px) {
+  :root {
+    --edge: 24px;
+  }
+
+  .section {
+    padding: 88px 0;
+  }
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

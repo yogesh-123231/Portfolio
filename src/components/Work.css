@@ -1,0 +1,649 @@
+/* =========================================================
+   WORK / SELECTED PROJECTS
+   ========================================================= */
+
+.work {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.work .section-head {
+  margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.work__intro {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 40px;
+
+  margin-bottom: 64px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+.work__heading {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-weight: 600;
+
+  font-size: clamp(30px, 3.6vw, 44px);
+
+  line-height: 1.18;
+
+  letter-spacing: -0.01em;
+
+  min-width: 0;
+}
+
+
+.work__heading .dim {
+  color: var(--text-dim);
+}
+
+
+.work__note {
+  margin: 0;
+
+  color: var(--text-dim);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  max-width: 280px;
+
+  text-align: right;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PROJECT FILTERS
+   ========================================================= */
+
+.work__filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-dimmer);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  color: var(--text);
+}
+
+.filter-btn--active {
+  color: var(--lime);
+}
+
+
+/* =========================================================
+   PROJECT LIST
+   ========================================================= */
+
+.work__list {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROJECT ROW
+   ========================================================= */
+
+.project {
+  display: grid;
+
+  /*
+    IMPORTANT:
+    minmax(0, 1fr) prevents the project body
+    from forcing the entire row wider than the viewport.
+  */
+
+  grid-template-columns:
+    150px
+    minmax(0, 1fr)
+    130px
+    150px;
+
+  gap: 28px;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 36px 0;
+
+  border-top: 1px solid var(--border-soft);
+
+  transition: background 0.25s ease;
+}
+
+
+.project:hover {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+
+/* =========================================================
+   PROJECT META
+   ========================================================= */
+
+.project__meta {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  min-width: 0;
+
+  font-size: 11px;
+
+  letter-spacing: 0.07em;
+
+  color: var(--text-dimmer);
+
+  text-transform: uppercase;
+}
+
+
+.project__index {
+  color: var(--lime);
+
+  font-size: 12px;
+}
+
+
+.project__label {
+  min-width: 0;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   PROJECT BODY
+   ========================================================= */
+
+.project__body {
+  min-width: 0;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+.project__title {
+  margin: 0 0 10px 0;
+
+  font-family: var(--font-body);
+
+  font-weight: 600;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+
+  min-width: 0;
+
+  transition: color 0.2s ease;
+}
+
+
+.project:hover .project__title {
+  color: var(--lime);
+}
+
+
+.project__desc {
+  color: var(--text-dim);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  max-width: 480px;
+
+  margin: 0 0 16px 0;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   PROJECT TAGS
+   ========================================================= */
+
+.project__tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   PROJECT LINKS
+   ========================================================= */
+
+.project__links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  font-size: 12px;
+
+  color: var(--text-dim);
+}
+
+
+.project__link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  width: fit-content;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+
+.project__link:hover {
+  color: var(--lime);
+}
+
+
+.project__link .arrow {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   PROJECT SCREENSHOT
+   ========================================================= */
+
+.project__thumb {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border-soft);
+
+  background: #101208;
+
+  text-decoration: none;
+
+  transform: translateY(0);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.project__thumb:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(213, 241, 108, 0.45);
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+.project__image {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-width: 0;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+
+.project__thumb:hover .project__image {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+   ========================================================= */
+
+.project__thumb-number {
+  position: absolute;
+
+  right: 12px;
+
+  bottom: 10px;
+
+  z-index: 2;
+
+  font-family: var(--font-body);
+
+  font-weight: 600;
+
+  font-size: 12px;
+
+  line-height: 1;
+
+  color: var(--lime);
+
+  letter-spacing: 0.02em;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   OLD THUMBNAIL TEXT
+   Hide it if any old JSX still contains
+   <span>{p.thumb}</span>
+   ========================================================= */
+
+.project__thumb > span:not(.project__thumb-number) {
+  display: none;
+}
+
+
+/* =========================================================
+   VIEW ALL PROJECTS
+   ========================================================= */
+
+.work__footer {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+
+  margin-top: 55px;
+
+  box-sizing: border-box;
+}
+
+
+.work__all-projects {
+  min-width: 235px;
+
+  height: 60px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+
+  font-weight: 400;
+
+  font-size: 14px;
+
+  line-height: 24px;
+
+  color: #9B9E96;
+
+  background: transparent;
+
+  border: 1px solid rgba(155, 158, 150, 0.25);
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.work__all-projects:hover {
+  color: #101111;
+
+  background: #D5F16C;
+
+  border-color: #D5F16C;
+
+  transform: translateY(-2px);
+}
+
+
+.work__all-arrow {
+  font-size: 23px;
+
+  line-height: 1;
+
+  font-weight: 300;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .project {
+    grid-template-columns:
+      120px
+      minmax(0, 1fr)
+      110px
+      140px;
+
+    gap: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE / SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 940px) {
+
+  .project {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 16px;
+
+    width: 100%;
+  }
+
+
+  .project__thumb {
+    order: -1;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+  }
+
+
+  .project__meta {
+    order: 1;
+  }
+
+
+  .project__body {
+    order: 2;
+  }
+
+
+  .project__links {
+    order: 3;
+
+    flex-direction: row;
+
+    gap: 20px;
+  }
+
+
+  .work__intro {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+
+  .work__note {
+    text-align: left;
+
+    max-width: 400px;
+  }
+
+
+  .work__footer {
+    margin-top: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .project {
+    padding: 30px 0;
+
+    gap: 14px;
+  }
+
+
+  .project__title {
+    font-size: 22px;
+  }
+
+
+  .project__desc {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+
+  .project__thumb {
+    border-radius: 8px;
+  }
+
+
+  .project__thumb:hover {
+    transform: translateY(-4px);
+  }
+
+
+  .project__links {
+    gap: 18px;
+  }
+
+
+  .work__footer {
+    margin-top: 40px;
+  }
+
+
+  .work__all-projects {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 58px;
+  }
+
+}

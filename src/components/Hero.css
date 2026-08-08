@@ -1,0 +1,1040 @@
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+
+  /*
+    Hero is allowed to continue below the first viewport.
+    This is what gives the scrolling continuation shown
+    in your second reference image.
+  */
+
+  min-height: calc(100vh - 102px);
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 72% 50%,
+      rgba(213, 241, 108, 0.035) 0%,
+      rgba(213, 241, 108, 0) 28%
+    ),
+    #101111;
+
+  color: #F0EFE8;
+}
+
+
+/* =========================================================
+   BACKGROUND NOISE
+   ========================================================= */
+
+.hero-noise {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 0;
+
+  opacity: 0.055;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.7'/%3E%3C/svg%3E");
+
+  mix-blend-mode: screen;
+}
+
+
+/* =========================================================
+   MAIN HERO
+   ========================================================= */
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  /*
+    Keeps the original hero content within the first viewport.
+  */
+  min-height: calc(100vh - 102px);
+
+  padding: 0 76px;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+
+  width: 760px;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.hero-eyebrow {
+  margin-bottom: 25px;
+
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 12px;
+  line-height: 24px;
+
+  letter-spacing: 1.2px;
+
+  color: #D5F16C;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN NAME
+   ========================================================= */
+
+.hero-title {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  font-size: 124px;
+  line-height: 103px;
+
+  letter-spacing: -5px;
+
+  color: #F0EFE8;
+}
+
+.hero-title span {
+  display: block;
+}
+
+
+/* =========================================================
+   YELLOW NAME
+   ========================================================= */
+
+.hero-title-accent {
+  color: #D5F16C;
+}
+
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.hero-tagline {
+  margin: 51px 0 0 0;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  font-size: 39px;
+  line-height: 43px;
+
+  letter-spacing: -1.5px;
+
+  color: #F0EFE8;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+  margin: 24px 0 0 0;
+
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0;
+
+  color: #9B9E96;
+}
+
+
+/* =========================================================
+   CTA CONTAINER
+   ========================================================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 33px;
+
+  margin-top: 43px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.hero-btn {
+  width: 240px;
+  height: 62px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0;
+
+  color: #9B9E96;
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PRIMARY CTA
+   ========================================================= */
+
+.hero-btn-primary {
+  background: #D5F16C;
+
+  color: #101111;
+
+  border: 1px solid #D5F16C;
+}
+
+.hero-btn-primary:hover {
+  background: #c8e85e;
+  border-color: #c8e85e;
+}
+
+
+/* =========================================================
+   SECONDARY CTA
+   ========================================================= */
+
+.hero-btn-secondary {
+  background: transparent;
+
+  color: #9B9E96;
+
+  border: 1px solid rgba(155, 158, 150, 0.2);
+}
+
+.hero-btn-secondary:hover {
+  color: #F0EFE8;
+
+  border-color: rgba(155, 158, 150, 0.42);
+}
+
+
+/* =========================================================
+   CTA ARROW
+   ========================================================= */
+
+.hero-arrow {
+  font-size: 23px;
+  line-height: 1;
+
+  font-weight: 300;
+}
+
+
+/* =========================================================
+   RIGHT SYSTEM
+   ========================================================= */
+
+.hero-system {
+  position: absolute;
+
+  width: 650px;
+  height: 520px;
+
+  top: 50%;
+  right: 55px;
+
+  transform: translateY(-50%);
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   ORBITS
+   ========================================================= */
+
+.orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(213, 241, 108, 0.62);
+
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   OUTER ORBIT
+   ========================================================= */
+
+.orbit-one {
+  width: 470px;
+  height: 215px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-29deg);
+
+  opacity: 0.82;
+}
+
+
+/* =========================================================
+   SECONDARY ORBIT
+   ========================================================= */
+
+.orbit-two {
+  width: 465px;
+  height: 215px;
+
+  border-color: rgba(200, 204, 193, 0.16);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(25deg);
+}
+
+
+/* =========================================================
+   DIAGONAL
+   ========================================================= */
+
+.system-diagonal {
+  position: absolute;
+
+  width: 590px;
+  height: 1px;
+
+  left: 30px;
+  top: 260px;
+
+  background: rgba(216, 220, 211, 0.17);
+
+  transform: rotate(-33deg);
+
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   CORE
+   ========================================================= */
+
+.system-core {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 190px;
+  height: 190px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(213, 241, 108, 0.72);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(213, 241, 108, 0.07) 0%,
+      rgba(213, 241, 108, 0.035) 45%,
+      rgba(0, 0, 0, 0) 75%
+    );
+}
+
+
+/* =========================================================
+   CORE CONTENT
+   ========================================================= */
+
+.system-core-inner {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   YD
+   ========================================================= */
+
+.system-initials {
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  font-size: 62px;
+  line-height: 1;
+
+  letter-spacing: -4px;
+
+  color: #F0EFE8;
+}
+
+
+/* =========================================================
+   CORE CAPTION
+   ========================================================= */
+
+.system-caption {
+  margin-top: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+
+  font-size: 11px;
+  line-height: 16px;
+
+  letter-spacing: 1.2px;
+
+  color: #9B9E96;
+}
+
+
+/* =========================================================
+   SYSTEM LABELS
+   ========================================================= */
+
+.system-label {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+
+.system-label span {
+  font-size: 11px;
+  line-height: 16px;
+
+  letter-spacing: 1.4px;
+
+  color: #9B9E96;
+}
+
+.system-label strong {
+  margin-top: 4px;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 16px;
+
+  letter-spacing: 1px;
+
+  color: #F0EFE8;
+}
+
+
+/* =========================================================
+   TOP SYSTEM LABEL
+   ========================================================= */
+
+.system-label-top {
+  top: 5px;
+  right: 5px;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   BOTTOM SYSTEM LABEL
+   ========================================================= */
+
+.system-label-bottom {
+  left: 0;
+  bottom: 18px;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   LOWER HERO AREA
+   ========================================================= */
+
+.hero-lower {
+  position: relative;
+  z-index: 5;
+
+  /*
+    Large top spacing deliberately pushes this area
+    below the first viewport.
+  */
+  padding:
+
+    80px
+    76px
+    55px;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+
+/* =========================================================
+   SOCIAL LINK
+   ========================================================= */
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0.3px;
+
+  color: #9B9E96;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.social-link:hover {
+  color: #F0EFE8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SOCIAL ICON
+   ========================================================= */
+
+.social-icon {
+  width: 23px;
+  height: 23px;
+
+  flex-shrink: 0;
+
+  color: #9B9E96;
+
+  transition: color 180ms ease;
+}
+
+.social-link:hover .social-icon {
+  color: #D5F16C;
+}
+
+
+/* =========================================================
+   SCROLL TO EXPLORE
+   ========================================================= */
+
+.scroll-explore {
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 13px;
+  line-height: 24px;
+
+  letter-spacing: 1.5px;
+
+  color: #9B9E96;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SCROLL ARROW
+   ========================================================= */
+
+.scroll-arrow {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+
+  font-size: 23px;
+  line-height: 1;
+
+  color: #F0EFE8;
+}
+
+
+/* =========================================================
+   HERO DIVIDER
+   ========================================================= */
+
+.hero-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin-top: 44px;
+
+  background: rgba(155, 158, 150, 0.22);
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   ========================================================= */
+
+@media (max-width: 1500px) {
+
+  .hero-inner {
+    padding: 0 60px;
+  }
+
+  .hero-content {
+    width: 650px;
+  }
+
+  .hero-title {
+    font-size: 105px;
+    line-height: 88px;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-tagline {
+    margin-top: 45px;
+
+    font-size: 33px;
+    line-height: 38px;
+  }
+
+  .hero-system {
+    width: 570px;
+    height: 460px;
+
+    right: 15px;
+  }
+
+  .orbit-one {
+    width: 420px;
+    height: 190px;
+  }
+
+  .orbit-two {
+    width: 415px;
+    height: 190px;
+  }
+
+  .system-core {
+    width: 170px;
+    height: 170px;
+  }
+
+  .system-initials {
+    font-size: 56px;
+  }
+
+  .system-diagonal {
+    width: 520px;
+    top: 230px;
+  }
+
+  .hero-lower {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+
+/* =========================================================
+   1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .hero-inner {
+    padding: 0 45px;
+  }
+
+  .hero-content {
+    width: 590px;
+  }
+
+  .hero-title {
+    font-size: 88px;
+    line-height: 76px;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-tagline {
+    margin-top: 42px;
+
+    font-size: 29px;
+    line-height: 34px;
+  }
+
+  .hero-actions {
+    margin-top: 35px;
+  }
+
+  .hero-btn {
+    width: 210px;
+  }
+
+  .hero-system {
+    width: 470px;
+    height: 400px;
+
+    right: 10px;
+  }
+
+  .orbit-one {
+    width: 360px;
+    height: 165px;
+  }
+
+  .orbit-two {
+    width: 355px;
+    height: 165px;
+  }
+
+  .system-core {
+    width: 145px;
+    height: 145px;
+  }
+
+  .system-initials {
+    font-size: 48px;
+  }
+
+  .system-caption {
+    margin-top: 24px;
+
+    font-size: 8px;
+    line-height: 14px;
+  }
+
+  .system-diagonal {
+    width: 440px;
+    top: 200px;
+  }
+
+  .system-label span {
+    font-size: 10px;
+  }
+
+  .system-label strong {
+    font-size: 11px;
+  }
+
+  .hero-lower {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: calc(100vh - 80px);
+  }
+
+  .hero-inner {
+    min-height: calc(100vh - 80px);
+
+    padding: 55px 40px 60px;
+
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    transform: none;
+  }
+
+  .hero-system {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: clamp(72px, 12vw, 100px);
+
+    line-height: 0.94;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-tagline {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .hero-lower {
+    padding:
+      55px
+      40px
+      45px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: calc(100vh - 70px);
+  }
+
+  .hero-inner {
+    min-height: calc(100vh - 70px);
+
+    padding: 42px 24px 45px;
+  }
+
+
+  /* EYEBROW */
+
+  .hero-eyebrow {
+    font-size: 10px;
+    line-height: 18px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* NAME */
+
+  .hero-title {
+    font-size: clamp(62px, 19vw, 88px);
+
+    line-height: 0.94;
+
+    letter-spacing: -4px;
+  }
+
+
+  /* TAGLINE */
+
+  .hero-tagline {
+    margin-top: 38px;
+
+    font-size: 25px;
+    line-height: 30px;
+
+    letter-spacing: -1px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .hero-description {
+    margin-top: 19px;
+
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+
+  .desktop-break {
+    display: none;
+  }
+
+
+  /* CTA */
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+
+    margin-top: 32px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    height: 58px;
+
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+
+  /* LOWER HERO */
+
+  .hero-lower {
+    padding:
+      40px
+      24px
+      35px;
+  }
+
+
+  /* SOCIALS */
+
+  .hero-socials {
+    flex-wrap: wrap;
+
+    gap: 18px 25px;
+  }
+
+  .social-link {
+    font-size: 13px;
+  }
+
+
+  /* SCROLL */
+
+  .scroll-explore {
+    margin-top: 25px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.2px;
+  }
+
+
+  /* DIVIDER */
+
+  .hero-divider {
+    margin-top: 35px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-title {
+    font-size: 64px;
+
+    line-height: 0.94;
+  }
+
+  .hero-tagline {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .hero-lower {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

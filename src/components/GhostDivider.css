@@ -1,0 +1,27 @@
+.ghost {
+  position: relative;
+  height: 110px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.ghost__text {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(80px, 13vw, 200px);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px #1e1e1e;
+  transform: translateY(46%);
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 640px) {
+  .ghost {
+    height: 70px;
+  }
+}
